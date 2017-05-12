@@ -6,8 +6,7 @@ import java.util.Properties;
 public class PropertiesManager {
 
 	private static Properties properties;
-	// TODO change to general.config later
-	private static String path = "general.test.config";
+	private static String path = "general.config";
 
 	public static String getProperty(String property) {
 		try {
@@ -17,7 +16,7 @@ public class PropertiesManager {
 				properties.load(file);
 			}
 		} catch (Exception e) {
-			System.out.println("Não foi possível carregar arquivo de propeties");
+			System.out.println("error to load properties file");
 		}
 
 		return properties.getProperty(property);
