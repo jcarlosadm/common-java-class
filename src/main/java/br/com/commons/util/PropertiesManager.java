@@ -9,7 +9,7 @@ public class PropertiesManager {
 	// TODO change to general.config later
 	private static String path = "general.test.config";
 
-	public static String getProperty(String propertie) {
+	public static String getProperty(String property) {
 		try {
 			if (properties == null) {
 				properties = new Properties();
@@ -20,7 +20,7 @@ public class PropertiesManager {
 			System.out.println("Não foi possível carregar arquivo de propeties");
 		}
 
-		return properties.getProperty(propertie);
+		return properties.getProperty(property);
 	}
 
 	public static void setNewPath(String newpath) {
