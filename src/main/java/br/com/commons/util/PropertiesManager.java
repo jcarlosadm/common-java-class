@@ -1,6 +1,7 @@
 package br.com.commons.util;
 
 import java.io.FileInputStream;
+import java.io.IOException;
 import java.util.Properties;
 
 public class PropertiesManager {
@@ -8,7 +9,7 @@ public class PropertiesManager {
 	private static Properties properties;
 	private static String path = "general.config";
 
-	public static String getProperty(String property) {
+	public static String getProperty(String property) throws IOException {
 		try {
 			if (properties == null) {
 				properties = new Properties();
@@ -16,7 +17,7 @@ public class PropertiesManager {
 				properties.load(file);
 			}
 		} catch (Exception e) {
-			System.out.println("error to load properties file");
+			throw new IOException("error to load properties file");
 		}
 
 		return properties.getProperty(property);
