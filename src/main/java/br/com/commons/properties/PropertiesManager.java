@@ -1,4 +1,4 @@
-package br.com.commons.util;
+package br.com.commons.properties;
 
 import java.io.FileInputStream;
 import java.io.IOException;
