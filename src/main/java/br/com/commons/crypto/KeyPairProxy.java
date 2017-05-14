@@ -18,7 +18,7 @@ public class KeyPairProxy {
 		return false;
 	}
 	
-	public PublicKey getPulicKey() {
+	public PublicKey getPublicKey() {
 		// TODO implement
 		return null;
 	}
