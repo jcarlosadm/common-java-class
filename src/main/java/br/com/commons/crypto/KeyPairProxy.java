@@ -5,7 +5,7 @@ import java.security.PublicKey;
 
 public class KeyPairProxy {
 	
-	private KeyPair keyPair;
+	private KeyPair keyPair = null;
 	
 	
 	public boolean createNewKeys(String user, String password) throws Exception {
