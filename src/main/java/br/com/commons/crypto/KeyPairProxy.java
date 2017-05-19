@@ -115,10 +115,10 @@ public class KeyPairProxy {
 	 *             in case of fail
 	 */
 	public String encryptWithPublicKey(String message) throws Exception {
-		return this.encrypt(message, this.publicKey);
+		return encrypt(message, this.publicKey);
 	}
 
-	private String encrypt(String message, PublicKey publicKey) throws Exception {
+	private static String encrypt(String message, PublicKey publicKey) throws Exception {
 		Cipher encryptCipher = Cipher.getInstance("RSA");
 		encryptCipher.init(Cipher.ENCRYPT_MODE, publicKey);
 
@@ -161,12 +161,12 @@ public class KeyPairProxy {
 	 * @throws Exception
 	 *             in case of fail
 	 */
-	public String encryptWithOtherPublicKey(String message, PublicKey key) throws Exception {
-		return this.encrypt(message, key);
+	public static String encryptWithOtherPublicKey(String message, PublicKey key) throws Exception {
+		return encrypt(message, key);
 	}
 
 	@SuppressWarnings("unused")
-	private boolean verifySignWithOtherPublicKey(String message, String signature, PublicKey publicKey) {
+	private static boolean verifySignWithOtherPublicKey(String message, String signature, PublicKey publicKey) {
 		// TODO implement
 		throw new NotImplementedException();
 	}
